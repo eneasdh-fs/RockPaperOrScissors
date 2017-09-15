@@ -13,6 +13,11 @@ public class Scissors implements PositionContract {
     }
 
     @Override
+    public String getImagePath() {
+        return "scissors";
+    }
+
+    @Override
     public Boolean canWin() {
         return null;
     }

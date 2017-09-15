@@ -14,6 +14,11 @@ public interface PositionContract {
     String getKey();
 
     /**
+     * @return the image path
+     */
+    String getImagePath();
+
+    /**
      * Decides whether he can win or not.
      *
      * @return true if I win

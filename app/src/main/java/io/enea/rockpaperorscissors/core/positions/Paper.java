@@ -13,6 +13,11 @@ public class Paper implements PositionContract {
     }
 
     @Override
+    public String getImagePath() {
+        return "paper";
+    }
+
+    @Override
     public Boolean canWin() {
         return null;
     }

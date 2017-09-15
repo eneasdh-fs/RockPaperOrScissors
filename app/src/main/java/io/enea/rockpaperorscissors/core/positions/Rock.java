@@ -12,6 +12,11 @@ public class Rock implements PositionContract {
     }
 
     @Override
+    public String getImagePath() {
+        return "rock";
+    }
+
+    @Override
     public Boolean canWin() {
         return null;
     }
