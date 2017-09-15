@@ -6,7 +6,17 @@ package io.enea.rockpaperorscissors.core;
 
 public class Judge {
 
-    public Boolean compare(PositionContract payer, PositionContract rival){
+    protected static Judge instance = new Judge();
+
+    private Judge() {
+    }
+
+    public static Judge getInstance() {
+        return instance;
+    }
+
+
+    public PositionContract getWinner(PositionContract payer, PositionContract rival) {
         return null;
     }
 }
