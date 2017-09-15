@@ -23,5 +23,5 @@ public interface PositionContract {
      *
      * @return true if I win
      */
-    Boolean canWin();
+    Boolean canWin(PositionContract rival);
 }
