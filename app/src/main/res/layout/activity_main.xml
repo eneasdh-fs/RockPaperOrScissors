@@ -1,19 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/content_inicio"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="io.enea.rockpaperorscissors.MainActivity">
+        tools:context=".MainActivity"
+        tools:showIn="@layout/activity_main">
 
-    <TextView
-            android:layout_width="wrap_content"
+    <LinearLayout
+            android:background="@color/colorPrimary"
+            android:id="@+id/container"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:id="@+id/wrapper_positions">
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/unknown"
+                    android:id="@+id/user"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VS"
+                    android:textSize="80dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"/>
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/unknown"
+                    android:id="@+id/rival"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
