@@ -46,19 +46,15 @@ public class MainActivity extends AppCompatActivity {
      * Build all available positions.
      */
     protected void buildAvailablePositions() {
-        for (PositionContract x : this.availablePositions()) {
-            this.positions.put(x.getKey(), x);
+        for (PositionContract shape : this.availablePositions()) {
+            this.positions.put(shape.getKey(), shape);
 
             /// Build the positions.
-            ImageView image = this.makeImage();
-
-            /// Set the image.
-            int path = this.extractImage(x);
-            image.setImageResource(path);
+            ImageView image = this.makeImage(shape);
 
             /// Listing the Click event.
             image.setOnClickListener(view -> {
-                PositionContract position = this.positions.get(x.getKey());
+                PositionContract position = this.positions.get(shape.getKey());
                 this.choose(position);
             });
 
@@ -72,8 +68,15 @@ public class MainActivity extends AppCompatActivity {
      *
      * @return the built image
      */
-    protected ImageView makeImage() {
+    protected ImageView makeImage(PositionContract position) {
+        /// Create image view
         ImageView image = new ImageView(this);
+
+        /// Set the image.
+        int path = this.extractImage(position);
+        image.setImageResource(path);
+
+        /// Set size
         image.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT));
         return image;
     }
