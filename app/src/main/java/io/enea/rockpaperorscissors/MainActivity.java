@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import io.enea.rockpaperorscissors.core.Generator;
 import io.enea.rockpaperorscissors.core.PositionContract;
+import io.enea.rockpaperorscissors.core.ResultContract;
 import io.enea.rockpaperorscissors.core.positions.Paper;
 import io.enea.rockpaperorscissors.core.positions.Rock;
 import io.enea.rockpaperorscissors.core.positions.Scissors;
@@ -129,12 +130,8 @@ public class MainActivity extends AppCompatActivity {
         PositionContract position = this.generator.random();
         this.rival.setImageResource(this.extractImage(position));
 
-        Boolean win = this.selectedPosition.canWin(position);
-
-        int status = win ? R.drawable.success : R.drawable.error;
-        String message = win ? "Ganaste" : "Perdiste :v";
-
-        this.makeMessage("Mensaje", message, status);
+        ResultContract result = this.selectedPosition.canWin(position);
+        this.makeMessage(result.getTitle(), result.getMessage(), this.getDrawableResourceKey(result.getIcon()));
     }
 
 
