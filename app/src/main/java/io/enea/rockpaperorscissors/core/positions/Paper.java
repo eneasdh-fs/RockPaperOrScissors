@@ -6,11 +6,6 @@ package io.enea.rockpaperorscissors.core.positions;
 
 public class Paper extends Position {
     @Override
-    public String getKey() {
-        return "paper";
-    }
-
-    @Override
     public String getImagePath() {
         return "paper";
     }
