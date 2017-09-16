@@ -9,10 +9,11 @@
         tools:showIn="@layout/activity_main">
 
     <LinearLayout
-            android:background="@color/colorPrimary"
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="40dp"
             android:orientation="vertical">
 
         <LinearLayout
@@ -27,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_horizontal">
+                android:gravity="center_horizontal|center_vertical">
 
             <ImageView
                     android:layout_width="wrap_content"
@@ -49,6 +50,7 @@
                     android:src="@drawable/unknown"
                     android:id="@+id/rival"/>
         </LinearLayout>
+
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -61,16 +63,14 @@
                     android:text="Jugar"
                     android:textSize="20dp"
                     android:layout_gravity="center_horizontal"
-                    android:id="@+id/game"
-            />
+                    android:id="@+id/game"/>
             <Button
                     android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:text="Reiniciar"
                     android:textSize="20dp"
                     android:layout_gravity="center_horizontal"
-                    android:id="@+id/restart"
-            />
+                    android:id="@+id/restart" />
         </LinearLayout>
     </LinearLayout>
 
